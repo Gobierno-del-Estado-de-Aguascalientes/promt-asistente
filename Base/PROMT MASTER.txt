@@ -1,0 +1,122 @@
+LLM (LARGE LANGUAGE MODEL)
+SEPARA LA FRASE POR PARTES, GENERA UNA CADENA DE PALABRAS
+
+Generar el prompt mediante el uso de delimitadores como
+"""
+'''
+---
+<>
+tags de xml
+===
+###
+Esto sirve para poder establecer instrucciones mas claras al momento de realizar el prompt, y evitar tambien
+que se realicen prompt inyection.
+
+IN-CONTEXT LEARNING
+Herramienta para poder redactar a un estilo ya establecido por la empresa.
+Mediante el uso de ejemplo o pasandoselos a el modelo de IA, este puede redactar una respuesta o texto al estilo
+que deseemos expresar. Podemos no proveer ningun ejemplo o varios.
+zero-shot inference : sin ejemplo
+one-shot inference : 1 ejemplo
+few-shot inference : +1 ejemplo
+
+SALIDAS ESTRUCTURADAS
+Dependiendo de las indicaciones, podemos obtener la información requerida en diferentes formatos, por ejemplo:
+JSON
+XML
+TEXTO ENRIQUESIDO
+TABLAS
+DOCUMENTOS
+ETC.
+
+VERIFICACIÓN DE CONDICIONES
+Verificar o pedirle a la IA que verifique lo que hemos ingresado en el sistema. Que realmente corresponda
+con lo que esperamos, condiciones que nosotros hemos configurado o puestas anteriormente
+
+Ejemplo: Pedirle a la IA que verifique el contexto del mensaje del usuario para determinar si es un mensaje
+destinado para los tramites, servicios de los cuales si podemos contestar.
+
+PLACEHOLDERS
+los placeholders son palabras claves, que eventualmente se reemplazaran por los valores necesarios, es 
+decir que estas nos sirven para poder generar plantillas (templates) en los cuales reciban datos que aun no
+tenemos, y que para posteriormente cuando mandemos a utilizar dicho template con los datos correctos, estos
+campos sean reemplazados por los valores.
+
+Un ejemplo común es de los correos electrónicos
+Hola <usuario>, bienvenido. Tu plan actual es <plan> y queremos agradecertelo. 
+Posteriorment dando los datos 
+usuario=juan
+plan=gratis
+Hola juan, bienvenido. Tu plan actual es gratis y queremos agradecertelo. 
+
+REFLEXIÓN
+Con estas instrucciones le pedimos al modelo de IA que genere otra solución y compare con una solucion propuesta,
+incluso puede ser alguna que el ya haya creado, esto con el fin de que compare y verifique que la información
+esta correcta o simplemente mejorar la solución.
+
+GUIDED PROMPTING
+Es proporcionar los pasos necesarios o sugeridos para que en base a ellos, la IA nos genere la respuesta 
+como la esperamos.
+
+CHAINED PROMPTING
+En base a los resultados obtenidos de los prompts, ir depurando para ir teniendo mejor información.
+
+ROOT PROMPT
+Con este se le hace la entrega del comportamiento que debe de seguir para poder contestar a los prompts 
+ingresados por los usuarios. 
+Se agregan especificaciones del input que puede recibir para procesar la solicitud, como la respondera, entre
+otras características.
+
+El usuario solo puede solicitar la información, utilizando dicho formato: "Informacion <nombre tramite>"
+y responder de una manera especificada.
+Y evitar que la IA genere información adicional a la que no se esta contemplando en el caso de uso.
+
+ROLE PROMPTING
+Esta más enfocado al comportamiento "personalidad", es decir lo que conforma el tono, calidez de la respuesta
+profesionalismo, etc. Podemos solicitar que se comporte como un psicologo, ingeniero, persona común, etc.
+
+FILTRO SEMÁNTICO
+Ayuda a incluir o excluir contenido específico basándose en su significado o intención, en lugar de solo en la 
+coincidencia de palabras claves. Es decir puede analizar el contexto, y realizar las siguientes acciones:
+-Limpieza de datos: Eliminar información sencible o irrelevante de un texto, como fechas, nombres o datos
+sensibles.
+-Control de contenido: Asegurarse que las respuestas del modelo cumplan con criterios específicos o eviten
+ciertos temas.
+-Resumen enfocado: Filtrar un texto para retener solo información esencial relacionado con un tema particular,
+preservando el significado general.
+
+
+CHAIN OF THOUGHTS
+Refutación de las ideas, el planteamiento para posteriormente generar respuestas mejor "pensadas" y acertadas
+Facilita la resolución de problemas al guiar el modelo a través de un proceso de razonamiento paso a
+paso mediante el uso de una serie coherente de pasos lógicos.
+Un ejemplo con las instrucciones que el modelo utiliza como la forma ideal de responder.
+
+ReAct (Resoning Action)
+Lo incitamos a razonar, tome acciones (investigar), concluir en base a lo anteriormente generado.
+Podemos conbinarlo con los demas patrones para obtener un mejor resultado.
+
+GAMEPLAY
+Basicamente es jugar o perdile que juegue contigo en base a lo que quieres conseguir.
+
+
+VECTORES Y EMBEDDINGS
+Permite a los modelos de inteligencia artificial comprender y procesar datos complejos al ubicar elementos
+con significado o contextos similares mas cercas unos de otros.
+Convierto los datos no estructurados en una lista o matriz de números reales que las maquinas pueden procesar
+matemáticamente.
+La proximidad geométrica entre dos vectires en el espacio N-dimensional refleja su similitud semántica o 
+contextual.
+Captura de contexto:Esto permite capturar el contexto de la conversación y diferenciar entre los 
+homógrafos.
+Reducción de dimensionalidad: transforma los datos de alta dimensión en datos de baja dimensión para
+poder ser procesados de mejor manera.
+
+
+
+SOBRE TODO SER MUY ESPECÍFICO
+
+
+
+
+
