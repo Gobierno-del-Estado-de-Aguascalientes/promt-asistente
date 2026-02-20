@@ -14,12 +14,15 @@ promt/
 │   ├── PROMPT COMPORTAMIENTO PARA BOT AGS.txt
 │   └── PROMT MASTER.txt
 ├── PROMP_ASISTENTE.txt
+├── PROMPT_TORIBIO.txt
 └── README.md
 ```
 
 ### Archivos Principales
 
-- **`PROMP_ASISTENTE.txt`**: Versión principal y más actualizada del prompt del asistente. Contiene las instrucciones de comportamiento, reglas y tareas del asistente virtual.
+- **`PROMPT_TORIBIO.txt`**: Prompt del asistente **Toribio**, mascota de la Feria Nacional de San Marcos (FNSM) 2026. Pensado para uso en n8n (AI Agent + FNSMTool + memoria). Responde en el idioma del usuario, da información del palenque, fechas, ciudad/estado invitados (Madrid, Coahuila), y redirige ayuda crítica al 070/911 en 10 idiomas. Incluye reglas de contexto (“y el 9”, “y el 7”), exclusión de falsas alarmas (matar el aburrimiento, solo fechas vs. país invitado) y cierre con enlaces oficiales. Ver más abajo la sección **Toribio (Feria Nacional de San Marcos)**.
+
+- **`PROMP_ASISTENTE.txt`**: Versión principal y más actualizada del prompt del asistente de trámites. Contiene las instrucciones de comportamiento, reglas y tareas del asistente virtual.
 
 - **`Base/PROMPT COMPORTAMIENTO PARA BOT AGS.txt`**: Versión base del prompt de comportamiento para el bot del Gobierno de Aguascalientes.
 
@@ -31,9 +34,36 @@ promt/
   - Técnicas avanzadas (Chain of Thoughts, ReAct, Role Prompting, etc.)
   - Vectores y embeddings
 
-## 🎯 Funcionalidades del Asistente
+## 🐂 Toribio — Asistente Feria Nacional de San Marcos (FNSM) 2026
 
-El asistente está diseñado para:
+**Toribio** es el asistente virtual mascota de la Feria Nacional de San Marcos. El prompt está en **`PROMPT_TORIBIO.txt`** y está pensado para integrarse en **n8n** (AI Agent con Chat Model, Simple Memory y herramienta FNSMTool).
+
+### Rol
+- Asistente entusiasta y experto de la FNSM 2026; responde en el **mismo idioma** que el usuario (ES, EN, FR, DE, PT, 中文, 日本語, العربية, Русский, हिन्दी).
+- Usa el **contexto de la conversación** (p. ej. “y el 9”, “y el 7” = mismo lugar, ese día).
+
+### Contenido principal
+- **Palenque**: cartel por fechas (abril–mayo), artistas, boletos (boleclick.mx), políticas.
+- **País/ciudad invitada**: Madrid, España (descripción breve).
+- **Estado invitado**: Coahuila (descripción breve).
+- **Fechas**: si el usuario da una fecha, responde con el evento de ese día (no con ciudad invitada).
+- **Casino**: de momento sin información; pronto habrá noticias.
+- **Otros**: inicio de la feria (1828), comida/bebidas, Foro de las Estrellas, Foro del Lago, Tere Jiménez, desarrollador (SIGOD + Patronato FNSM), novio/novia (tono de broma), furro/therian (solo torito).
+
+### Ayuda crítica (070 / 911)
+- **070**: triste, infeliz, depresión, suicidio.
+- **911**: agresión, arma, asalto, violación, heridos, disparos, sangrado, perdidos, piden ayuda (help, aide, ayuda, etc.), caídas/fracturas con lesión.
+- Respuesta **solo** frase empática + “Marca al 070/911” + `tel:070` o `tel:911`, **en el idioma del mensaje**; sin enlaces a la feria ni “Puedes visitar el enlace”.
+- Exclusión de falsas alarmas: no activar con “me estoy divirtiendo”, “matar el aburrimiento/tiempo”, “kill boredom/time”, ni cuando el mensaje sea solo una fecha (ej. “el 29 de abril”) sin mencionar país/ciudad invitado.
+
+### Cierre
+- Si el usuario dice que no necesita más (“no”, “nel”, etc.): despedida e invitación a **https://www.feriasanmarcos.com/enlaces/** (incluir el enlace en la respuesta).
+
+---
+
+## 🎯 Funcionalidades del Asistente (Trámites AGS)
+
+El asistente de trámites está diseñado para:
 
 - Responder preguntas frecuentes sobre trámites y servicios del Gobierno del Estado de Aguascalientes
 - Utilizar herramientas especializadas:
