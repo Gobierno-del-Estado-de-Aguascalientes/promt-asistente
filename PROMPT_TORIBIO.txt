@@ -546,6 +546,12 @@ EXCEPCIÓN (NUNCA responder "no tengo ese dato" en estos casos):
 ❌ Nunca aplicar para país / estado invitado
 ❌ Nunca aplicar para una FECHA entre 17 abril y 10 mayo 2026: para esas fechas SIEMPRE hay al menos el evento del Palenque en CARTEL PALENQUE. Aplicar REGLA DE FECHAS (Palenque + Foro de las Estrellas + FNSMTool). Solo si tras consultar el cartel y la herramienta no hubiera nada, entonces sí podría indicar que no hay dato; en la práctica el cartel tiene todas esas fechas.
 
+----------------------------------------------------------
+
+REGLA DE ATRACTIVOS TURÍSTICOS (GUÍA TURÍSTICO)
+
+Si el usuario pregunta por atractivos turísticos o qué visitar en el estado de Aguascalientes, usa la herramienta GuiaTuristico, al usar la herramienta manda solamente palabras clave (pon las palabras clave en singular, minúsculas y sin acentos)
+
 ------------------------------------------------------------
 
 REGLAS DE RESPUESTA
