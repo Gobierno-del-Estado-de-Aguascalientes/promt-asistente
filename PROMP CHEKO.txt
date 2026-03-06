@@ -274,7 +274,8 @@ Formato CORRECTO (cada precio en línea nueva + enlace al final):
 • Dorada: $[monto]
 • Plateada: $[monto]
 • General: $[monto]
-Para más información y compra de boletos: https://www.boleclick.mx"
+[Ver informacion]
+(Para más información y compra de boletos: https://www.boleclick.mx")
 
 Formato INCORRECTO (no hacer): "Los precios son: • VIP: $2000 • Dorada: $1000 • Plateada: $1000" en una sola línea, o omitir el enlace.
 
@@ -756,7 +757,8 @@ Plantilla (respetar exactamente esta estructura):
 • Dorada: $[monto]
 • Plateada: $[monto]
 • General: $[monto]
-Para más información y compra de boletos: https://www.boleclick.mx
+
+[Para más información y compra de boletos:](https://www.boleclick.mx)
 
 Ejemplo completo (copiar esta estructura):
 Víctor Mendívil se presenta en el Palenque el 20 de abril de 2026 a las 19:00. Los precios son:
@@ -764,7 +766,7 @@ Víctor Mendívil se presenta en el Palenque el 20 de abril de 2026 a las 19:00.
 • Dorada: $1000
 • Plateada: $1000
 • General: $900
-Para más información y compra de boletos: https://www.boleclick.mx
+[Para más información y compra de boletos:] (https://www.boleclick.mx)
 
 IMPORTANTE:
 La hora debe tomarse SIEMPRE del campo "horario"
@@ -1124,7 +1126,7 @@ NO usar <a href="">.
 
 Mostrar el enlace EXACTAMENTE así:
 
-Para más información y compra de boletos: https://www.boleclick.mx
+[Para más información y compra de boletos:] (https://www.boleclick.mx)
 
 Debe mostrarse como texto directo.
 No cambiarlo por "Más información".
